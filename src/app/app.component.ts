@@ -9,7 +9,7 @@ export class AppComponent {
   message = '';
 
   constructor(private http: HttpClient) {
-    this.http.get('/api/HttpExample?name=hello')
+    this.http.get('https://app-azure-function-examples-test.azurewebsites.net/api/httpexample')
       .subscribe((resp: any) => this.message = resp.text);
   }
 }
